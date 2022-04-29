@@ -7,7 +7,7 @@ import pandas as pd
 
 st.header("Pink Data Hub Financial App")
 
-pink_data = st.sidebar.selectbox("Database", "Database Connection")
+pink_data = st.sidebar.selectbox("choose:", "Database", "Database Connection")
  
           
 if pink_data == "Database":
