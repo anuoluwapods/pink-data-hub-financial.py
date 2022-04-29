@@ -22,10 +22,8 @@ if pink_data == 'Database':
                st.form_submit_button("Submit")
             
 @st.experimental_singleton
-con_str = f'Driver={driver};Server={server};Database={database};Uid={username};Pwd={password};Encrypt=Yes;TrustServerCertificate=No;Authentication={auth};'
-
 def init_connection():
-    return pyodbc.connect(con_str)
+    return pyodbc.connect(f'Driver={driver};Server={server};Database={database};Uid={username};Pwd={password};Encrypt=Yes;TrustServerCertificate=No;Authentication={auth};')
 conn = init_connection()
 
 
