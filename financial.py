@@ -2,6 +2,7 @@ import streamlit as st
 import datetime
 import pyodbc
 import pandas as pd
+import pip
 # auth = "ActiveDirectoryPassword"
 # driver = "{ODBC Driver 17 for SQL Server}"
 # f'Driver={driver};Server={server};Database={database};Uid={username};Pwd={password};Encrypt=Yes;TrustServerCertificate=No;Authentication={auth};'
