@@ -1,6 +1,6 @@
 pyodbc
 pandas
 datetime
-libmsodbcsql
+
 
 
