@@ -20,6 +20,7 @@ if pink_data == 'Database':
          amount = st.text_input("Amount")
          payment = st.text_input("Payment Mode")
          submit = st.form_submit_button("Submit")
+json.dumps(data, indent=4, sort_keys=True, default=str)
 deta = Deta(st.secrets["deta_key"])
 db = deta.Base("Financial-records")
 data = {"company_id": id_name, "date": date, "company_name":name, "amount":amount, "payment_mode":payment}
