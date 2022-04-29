@@ -43,4 +43,4 @@ if pink_data == 'Database Connection':
     for row in rows:
         i += 1
         st.write(f"{i}. User : {row[0]} and Pass : {row[1]}:")
-        return cur.fetchall()
+    return cur.fetchall()
