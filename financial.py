@@ -22,8 +22,6 @@ if pink_data == 'Database':
                st.form_submit_button("Submit")
             
 @st.experimental_singleton
-auth = 'ActiveDirectoryPassword'
-driver = '{ODBC Driver 17 for SQL Server}'
 con_str = f'Driver={driver};Server={server};Database={database};Uid={username};Pwd={password};Encrypt=Yes;TrustServerCertificate=No;Authentication={auth};'
 
 def init_connection():
