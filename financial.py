@@ -38,7 +38,7 @@ def run_query(query):
      
 if pink_data == 'Database Connection':
     st.header("Database Records")
-    rows = run_query("SELECT * from company_details;")
+    rows = run_query("SELECT * FROM dbo.company_details;")
     i = 0
     for row in rows:
         i += 1
