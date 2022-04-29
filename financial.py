@@ -14,13 +14,12 @@ if pink_data == 'Database':
     with st.form("forms", clear_on_submit=True):
          id_name = st.text_input("Company's ID")
          date = st.date_input("Today's Date",
-                      datetime.date(2022, 4, 1))
+                      datetime.strfttime(2022, 4, 1))
          name = st.text_input("Company's Name")
          amount = st.text_input("Amount")
          payment = st.text_input("Payment Mode")
          submit = st.form_submit_button("Submit")
-         now = datetime.now()
-         date = now.date.strfttime("%Y/%m/%d")       
+              
 deta = Deta(st.secrets["deta_key"])
 
 db = deta.Base("Financial-records")
