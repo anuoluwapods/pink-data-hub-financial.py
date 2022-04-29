@@ -23,8 +23,7 @@ if pink_data == 'Database':
             
 @st.experimental_singleton
 def init_connection():
-    return pyodbc.connect(
-        'DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+password)
+    return pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+password)
 conn = init_connection()
 
 
