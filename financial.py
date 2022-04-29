@@ -7,7 +7,7 @@ import pandas as pd
 
 st.header("Pink Data Hub Financial App")
 
-pink_data = st.sidebar.selectbox('choose:', ('Database', 'Database Connection'))
+pink_data = st.sidebar.button('Database')
  
           
 if pink_data == 'Database':
@@ -33,11 +33,3 @@ def run_query(query):
     with conn.cursor() as cur:
         cur.execute(query)
         return cur.fetchall()
-    
-if pink_data == 'Database Connection':
-    st.header("Database Records")
-    rows = run_query("SELECT * from company_details;")
-    i = 0
-    for row in rows:
-        i += 1
-        st.write(f"{i}. User : {row[0]} and Pass : {row[1]}:")
