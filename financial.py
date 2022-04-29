@@ -24,9 +24,8 @@ if pink_data == 'Database':
 deta = Deta(st.secrets["deta_key"])
 
 db = deta.Base("Financial-records")
- 
-         if submit:
-             db.put({"company_id": id_name, "date": date, "company_name":name, "amount":amount, "payment_mode":payment})
+if submit:
+     db.put({"company_id": id_name, "date": date, "company_name":name, "amount":amount, "payment_mode":payment})
 
 
 "---"
