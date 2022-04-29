@@ -14,7 +14,7 @@ def init_connection():
         server="ANUOLUWAPODS\SQLEXPRESS",
         DATABASE="pink_data_hub",
         UID="test",
-        PWD="test"
+        PWD="test",
         
     )
 
