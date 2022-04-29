@@ -2,6 +2,7 @@ pyodbc
 pandas
 datetime
 deta
+bson
 
 
 
