@@ -2,8 +2,10 @@ import streamlit as st
 import datetime
 import pyodbc
 import pandas as pd
+# auth = "ActiveDirectoryPassword"
+# driver = "{ODBC Driver 17 for SQL Server}"
+# f'Driver={driver};Server={server};Database={database};Uid={username};Pwd={password};Encrypt=Yes;TrustServerCertificate=No;Authentication={auth};'
 
-# 'DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+password
 
 st.header("Pink Data Hub Financial App")
 
@@ -23,7 +25,7 @@ if pink_data == 'Database':
             
 @st.experimental_singleton
 def init_connection():
-    return pyodbc.connect(f'Driver={driver};Server={server};Database={database};Uid={username};Pwd={password};Encrypt=Yes;TrustServerCertificate=No;Authentication={auth};')
+    return pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+password)
 conn = init_connection()
 
 
