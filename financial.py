@@ -6,6 +6,7 @@ import pip
 # auth = "ActiveDirectoryPassword"
 # driver = "{ODBC Driver 17 for SQL Server}"
 # f'Driver={driver};Server={server};Database={database};Uid={username};Pwd={password};Encrypt=Yes;TrustServerCertificate=No;Authentication={auth};'
+# 'DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+password
 
 
 st.header("Pink Data Hub Financial App")
@@ -27,15 +28,25 @@ if pink_data == 'Database':
                    st.success("Submitted Successfully")
             
 @st.experimental_singleton
-def init_connection():
-    return pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+password)
-conn = init_connection()
+def pink_data():
+    return pyodbc.connect(
+        "DRIVER={ODBC Driver 17 for SQL Server};SERVER="
+        +st.secrets["server"]
+        +";DATABASE="
+        +st.secrets["database"]
+        +";UID="
+        +st.secrets["username"]
+        +";PWD="
+        +st.secrets["password"]
+    )
+conn = pink_data()
 
 
 @st.experimental_memo(ttl=600)
 def run_query(query):
     with conn.cursor() as cur:
         cur.execute(query)
+        return cur.fetchall()
     
     
      
