@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
-import datetime
-import date
+from datetime import date, datetime
 from deta import Deta
 import json
 
