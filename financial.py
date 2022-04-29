@@ -1,5 +1,4 @@
 import streamlit as st
-from datetime import date, datetime
 from deta import Deta
 import json
 
@@ -17,15 +16,12 @@ db = deta.Base("Financial-records")
 if pink_data == 'Database':
     with st.form("forms", clear_on_submit=True):
          id_name = st.text_input("Company's ID")
-         date = st.date_input("Today's Date",
-                      datetime.date(2022, 4, 1))
-         date = date.now().strfttime('%Y/%m/%d')
          name = st.text_input("Company's Name")
          amount = st.text_input("Amount")
          payment = st.text_input("Payment Mode")
          submitted = st.form_submit_button("Submit")
          if submitted:
-             db.put({"company_id": id_name, "date": date, "company_name":name, "amount":amount, "payment_mode":payment})
+             db.put({"company_id": id_name,"company_name":name, "amount":amount, "payment_mode":payment})
        
               
 
