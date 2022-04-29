@@ -9,7 +9,12 @@ st.header("Pink Data Hub Financial App")
 
 @st.experimental_singleton
 def init_connection():
-    return psycopg2.connect(**st.secrets["postgres"])
+    return pyodbc.connect(
+        "DRIVER={ODBC Driver 17 for Sql Server};SERVER="
+        +st.secrets["ANUOLUWAPODS\SQLEXPRESS"]
+        +";DATABASE="
+        +st.secrets["pink_data_hub"]
+    )
 
 conn = init_connection()
 
@@ -20,9 +25,8 @@ if pink_data == "Database":
           with st.form("Submit", clear_on_submit=True):
                st.text_input("Company's ID")
                st.text_input("Company's Name")
-               st.text_input("Company's Phone Number")
-               st.text_input("Company's Email Address")
-               st.text_input("Company's Location")
+               st.text_input("Amount")
+               st.text_input("Payment Mode")
                st.date_input("Today's Date",
                          datetime.date(2022, 3, 1 ))
                st.form_submit_button("Submit")
