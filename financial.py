@@ -10,10 +10,15 @@ st.header("Pink Data Hub Financial App")
 @st.experimental_singleton
 def init_connection():
     return pyodbc.connect(
-        driver="SQL Server",
-        server="ANUOLUWAPODS\SQLEXPRESS",
-        DATABASE="pink_data_hub"
-        
+        "DRIVER={ODBC Driver 17 for SQL Server};SERVER="
+        +st.secrets["ANUOLUWAPODS\SQLEXPRESS"]
+        +";DATABASE="
+        +st.secrets["pink_data_hub"]
+        +";UID="
+        +st.secrets["test"]
+        +";PWD="
+        +st.secrets["test"]
+       
     )
 
 conn = init_connection()
