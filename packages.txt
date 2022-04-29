@@ -1,2 +1,2 @@
-msodbcsql17
-ODBC DRIVER 17
+msodbcsqlr17
+
