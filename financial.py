@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 from datetime import date, datetime
 from deta import Deta
-from json impot dumps
+from json import dumps
 
 
 st.header("Pink Data Hub Financial App")
