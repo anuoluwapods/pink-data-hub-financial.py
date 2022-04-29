@@ -7,13 +7,6 @@ import pandas as pd
 
 st.header("Pink Data Hub Financial App")
 
-@st.experimental_singleton
-def init_connection():
-    return pyodbc.connect(
-        'DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+password)
-
-conn = init_connection()
-
 pink_data = st.sidebar.selectbox("Database", "Database Connection")
  
           
@@ -26,6 +19,14 @@ if pink_data == "Database":
                st.date_input("Today's Date",
                          datetime.date(2022, 3, 1 ))
                st.form_submit_button("Submit")
+            
+ @st.experimental_singleton
+def init_connection():
+    return pyodbc.connect(
+        'DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+password)
+
+conn = init_connection()
+
 
 @st.experimental_memo(ttl=600)
 def run_query(query):
