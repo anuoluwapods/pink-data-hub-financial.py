@@ -8,8 +8,7 @@ st.header("Pink Data Hub Financial App")
 
 pink_data = st.sidebar.selectbox("choose", ('Choose', 'Database', 'Database Connection'))
 
-deta = Deta(st.secrets["deta_key"])
-db = deta.Base("Financial-records")
+
 
 if pink_data == 'Database':
     form = st.form("forms", clear_on_submit=True)
@@ -20,6 +19,8 @@ if pink_data == 'Database':
     amount = form.text_input("Amount")
     payment = form.text_input("Payment Mode")
     submit = form.form_submit_button("Submit")
+deta = Deta(st.secrets["deta_key"])
+db = deta.Base("Financial-records")
     if submit:
         db.put({"company_id": id, "date": date, "company_name":name, "amount":amount, "payment_mode":payment})
   
