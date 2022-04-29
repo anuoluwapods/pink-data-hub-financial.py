@@ -53,14 +53,14 @@ if pink_data == 'Database Connection':
     
 if pink_data == 'Download File':
     df = pd.DataFrame(df)
-            file_name = "financial_records.csv"
-            file_path = f"./{file_name}"
+    file_name = "financial_records.csv"
+    file_path = f"./{file_name}"
 
-            df.to_csv(file_path)
+    df.to_csv(file_path)
 
-            df = open(file_path, 'rb')
-            st.download_button(label='Click to download',
+    df = open(file_path, 'rb')
+    st.download_button(label='Click to download',
                                data=df,
                                file_name=file_name,
                                key='download_df')
-            df.close()
+    df.close()
