@@ -24,7 +24,7 @@ if pink_data == 'Database':
          payment = st.text_input("Payment Mode")
          submitted = st.form_submit_button("Submit")
          if submitted:
-             db.put({"company_id": id_name, "date": date.datetime.now().strfttime('%Y-%m-%d'), "company_name":name, "amount":amount, "payment_mode":payment})
+             db.put({"company_id": id_name, "date": date.strfttime('%Y-%m-%d'), "company_name":name, "amount":amount, "payment_mode":payment})
        
               
 
