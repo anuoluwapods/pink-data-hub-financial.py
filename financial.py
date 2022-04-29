@@ -19,7 +19,7 @@ if pink_data == 'Database':
          amount = st.text_input("Amount")
          payment = st.text_input("Payment Mode")
          submit = st.form_submit_button("Submit")
-        
+ date = datetime.strfttime(date)       
 deta = Deta(st.secrets["deta_key"])
 
 db = deta.Base("Financial-records")
