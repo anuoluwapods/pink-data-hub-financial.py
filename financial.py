@@ -1,8 +1,8 @@
 import streamlit as st
 import pandas as pd
-from datetime import datetime
+from datetime import date, datetime
 from deta import Deta
-import json
+from json impot dumps
 
 
 st.header("Pink Data Hub Financial App")
@@ -22,7 +22,7 @@ if pink_data == 'Database':
          submit = st.form_submit_button("Submit")
     if submit:
         db.put({"company_id": id_name, "date": date, "company_name":name, "amount":amount, "payment_mode":payment})
-
+json.dumps(datetime.now(), default=json_serial)
 deta = Deta(st.secrets["deta_key"])
 
 
