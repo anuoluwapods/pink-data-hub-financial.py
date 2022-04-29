@@ -11,7 +11,7 @@ st.header("Pink Data Hub Financial App")
 def init_connection():
     return pyodbc.connect(
         driver="SQL Server",
-        server=ANUOLUWAPODS\SQLEXPRESS
+        server="ANUOLUWAPODS\SQLEXPRESS",
         DATABASE="pink_data_hub",
         UID="test"
         PWD="test,
