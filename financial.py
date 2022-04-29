@@ -11,7 +11,7 @@ st.header("Pink Data Hub Financial App")
 def init_connection():
     return pyodbc.connect(
         "DRIVER={ODBC Driver 17 for SQL Server};SERVER="
-        +st.secrets["ANUOLUWAPODS\SQLEXPRESS"]
+        +st.secrets["ANUOLUWAPODS"]
         +";DATABASE="
         +st.secrets["pink_data_hub"]
         +";UID="
