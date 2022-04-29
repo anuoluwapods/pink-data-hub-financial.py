@@ -19,12 +19,13 @@ if pink_data == 'Database':
          id_name = st.text_input("Company's ID")
          date = st.date_input("Today's Date",
                       datetime.date(2022, 4, 1))
+         date = datetime.now().strfttime('%Y/%m/%d')
          name = st.text_input("Company's Name")
          amount = st.text_input("Amount")
          payment = st.text_input("Payment Mode")
          submitted = st.form_submit_button("Submit")
          if submitted:
-             db.put({"company_id": id_name, "date": datetime.now().strfttime('%Y-%m-%d'), "company_name":name, "amount":amount, "payment_mode":payment})
+             db.put({"company_id": id_name, "date": date, "company_name":name, "amount":amount, "payment_mode":payment})
        
               
 
