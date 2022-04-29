@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import datetime
-from deta import Deta
 import base64
 from st_aggrid import AgGrid
 
