@@ -12,7 +12,7 @@ def init_connection():
     return pyodbc.connect(
         driver="SQL Server",
         server="ANUOLUWAPODS\SQLEXPRESS",
-        DATABASE="pink_data_hub",
+        DATABASE="pink_data_hub"
         
     )
 
