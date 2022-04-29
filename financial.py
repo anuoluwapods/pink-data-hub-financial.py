@@ -19,11 +19,12 @@ if pink_data == 'Database':
     amount = form.text_input("Amount")
     payment = form.text_input("Payment Mode")
     submit = form.form_submit_button("Submit")
-deta = Deta(st.secrets["deta_key"])
-db = deta.Base("Financial-records")
 if submit:
      db.put({"company_id": id, "date": date, "company_name":name, "amount":amount, "payment_mode":payment})
   
+deta = Deta(st.secrets["deta_key"])
+db = deta.Base("Financial-records")
+
 if pink_data ==  'Database Connection':
     db_content = db.fetch().items
     st.write(db_content)
