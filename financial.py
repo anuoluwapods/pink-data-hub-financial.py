@@ -46,7 +46,7 @@ if pink_data == 'Database':
 
 
 if pink_data == 'Database Connection':
-    df = pd.read_csv(r"C:\Users\user\Documents\Data Sets\CSV\company_details.csv")
+    df = pd.read_csv("company_details.csv")
     st.markdown("Data Record: ")
     AgGrid(df, editable=True)
     
