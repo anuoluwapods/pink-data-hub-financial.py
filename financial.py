@@ -18,7 +18,7 @@ if pink_data == 'Database':
     with st.form("forms", clear_on_submit=True):
          id_name = st.text_input("Company's ID")
          date = st.date_input("Today's Date",
-                      datetime.date(2022, 4, 1))
+                      datetime.datetime(2022, 4, 1))
          date = datetime.now().strfttime('%Y/%m/%d')
          name = st.text_input("Company's Name")
          amount = st.text_input("Amount")
