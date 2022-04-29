@@ -6,7 +6,7 @@ from st_aggrid import AgGrid
 
 
 # Adding Animation at the top of webapp
-file_ = open("image_1.gif", "rb")
+file_ = open("image1.gif", "rb")
 contents = file_.read()
 data_url = base64.b64encode(contents).decode("utf-8")
 file_.close()
