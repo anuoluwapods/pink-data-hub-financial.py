@@ -1,7 +1,10 @@
-pyodbc
 pandas
 datetime
 deta
+streamlit
+streamlit-folium
+streamlit-AgGrid
+
 
 
 
