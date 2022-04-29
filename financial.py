@@ -3,7 +3,7 @@ import datetime
 import pyodbc
 import pandas as pd
 
-
+# 'DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+password
 
 st.header("Pink Data Hub Financial App")
 
@@ -22,8 +22,12 @@ if pink_data == 'Database':
                st.form_submit_button("Submit")
             
 @st.experimental_singleton
+auth = 'ActiveDirectoryPassword'
+driver = '{ODBC Driver 17 for SQL Server}'
+con_str = f'Driver={driver};Server={server};Database={database};Uid={username};Pwd={password};Encrypt=Yes;TrustServerCertificate=No;Authentication={auth};'
+
 def init_connection():
-    return pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+password)
+    return pyodbc.connect(con_str)
 conn = init_connection()
 
 
