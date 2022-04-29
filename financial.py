@@ -19,14 +19,15 @@ if pink_data == 'Database':
          amount = st.text_input("Amount")
          payment = st.text_input("Payment Mode")
          submit = st.form_submit_button("Submit")
-    if submit:
-        db.put({"company_id": id_name, "date": date, "company_name":name, "amount":amount, "payment_mode":payment})
-
+        
 deta = Deta(st.secrets["deta_key"])
-
 
 db = deta.Base("Financial-records")
  
+    if submit:
+        db.put({"company_id": id_name, "date": date, "company_name":name, "amount":amount, "payment_mode":payment})
+
+
 "---"
 
 
