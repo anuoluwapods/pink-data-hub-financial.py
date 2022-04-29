@@ -13,8 +13,6 @@ def init_connection():
         driver="SQL Server",
         server="ANUOLUWAPODS\SQLEXPRESS",
         DATABASE="pink_data_hub",
-        UID="test",
-        PWD="test",
         
     )
 
