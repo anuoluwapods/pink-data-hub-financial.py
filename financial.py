@@ -7,10 +7,10 @@ import pandas as pd
 
 st.header("Pink Data Hub Financial App")
 
-pink_data = st.sidebar.selectbox("choose:", "Database", "Database Connection")
+pink_data = st.sidebar.selectbox('choose:', ('Database', 'Database Connection'))
  
           
-if pink_data == "Database":
+if pink_data == 'Database':
           with st.form("Submit", clear_on_submit=True):
                st.text_input("Company's ID")
                st.text_input("Company's Name")
@@ -34,7 +34,7 @@ def run_query(query):
         cur.execute(query)
         return cur.fetchall()
     
-if pink_data == "Database Connection":
+if pink_data == 'Database Connection':
     st.header("Database Records")
     rows = run_query("SELECT * from company_details;")
     i = 0
