@@ -51,7 +51,7 @@ if pink_data == 'Database Connection':
     st.markdown("Data Record: ")
     AgGrid(df, editable=True)
     
- if pink_data == 'Download File':
+if pink_data == 'Download File':
     df = pd.DataFrame(df)
             file_name = "financial_records.csv"
             file_path = f"./{file_name}"
