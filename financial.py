@@ -20,7 +20,7 @@ if pink_data == 'Database':
     submit = form.form_submit_button("Submit")
     
     
-deta = Deta.Base(st.secrets["deta_key"])
+deta = Deta(st.secrets["deta_key"])
         
 db = deta.Base("Financial-records")
 
