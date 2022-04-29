@@ -21,8 +21,8 @@ if pink_data == 'Database':
     submit = form.form_submit_button("Submit")
 deta = Deta(st.secrets["deta_key"])
 db = deta.Base("Financial-records")
-    if submit:
-        db.put({"company_id": id, "date": date, "company_name":name, "amount":amount, "payment_mode":payment})
+if submit:
+     db.put({"company_id": id, "date": date, "company_name":name, "amount":amount, "payment_mode":payment})
   
 if pink_data ==  'Database Connection':
     db_content = db.fetch().items
