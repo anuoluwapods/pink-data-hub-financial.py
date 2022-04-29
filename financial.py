@@ -22,7 +22,9 @@ if pink_data == 'Database':
                st.text_input("Amount")
                st.text_input("Payment Mode")
                
-               st.form_submit_button("Submit")
+               submit = st.form_submit_button("Submit")
+               if submit:
+                   st.success("Submitted Successfully")
             
 @st.experimental_singleton
 def init_connection():
