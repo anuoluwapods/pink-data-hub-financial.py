@@ -1,6 +1,7 @@
 pyodbc
 pandas
 datetime
+deta
 
 
 
