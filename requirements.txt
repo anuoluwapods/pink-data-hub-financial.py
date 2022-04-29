@@ -1,4 +1,4 @@
 pyodbc
 pandas
 datetime
-ODBC DRIVER 17
+
