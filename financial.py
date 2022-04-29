@@ -20,7 +20,7 @@ if pink_data == "Database":
                          datetime.date(2022, 3, 1 ))
                st.form_submit_button("Submit")
             
- @st.experimental_singleton
+@st.experimental_singleton
 def init_connection():
     return pyodbc.connect(
         'DRIVER={ODBC Driver 17 for SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+password)
