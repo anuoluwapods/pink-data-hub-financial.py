@@ -24,7 +24,7 @@ with st.form("forms", clear_on_submit=True):
     name = col3.text_input("Company's Name")
     amount = col4.text_input("Amount")
     payment = col3.text_input("Payment Mode")
-    submit = col4.form_submit_button("Submit")
+    submit = st.form_submit_button("Submit")
     if submit:
             st.success("Submitted Successfully")
             data = {"company_id": id, "date": date, "company_name":name, "amount":amount, "payment_mode":payment}
