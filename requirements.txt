@@ -1,9 +1,4 @@
-streamlit==1.2.0
+streamlit==1.10.0
 streamlit-folium==0.6.4
 pandas==1.2.0
-streamlit-aggrid
-streamlit-lottie
 datetime
-
-
-
