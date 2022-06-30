@@ -12,6 +12,7 @@ image = Image.open('image.png')
 
 
 col1.header("Pink Data Hub Financial App")
+col1.write("A Form Web App With Downloadable CSV File")
 col2.image(image)
 
 
