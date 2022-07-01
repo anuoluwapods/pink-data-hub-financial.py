@@ -14,8 +14,6 @@ image = Image.open('image.png')
 col1.header("Pink Data Hub Financial App")
 col2.image(image)
 
-df.append(data, ignore_index=True)
-df.to_csv("company_details.csv", index=False, encoding="utf-8")
 
 df = pd.read_csv("company_details.csv")
 st.markdown("Data Record: ")
