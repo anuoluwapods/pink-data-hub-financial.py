@@ -16,7 +16,7 @@ col2.image(image)
 
 
     
-df = pd.DataFrame(df)
+
 file_name = "financial_records.csv"
 file_path = f"./{file_name}"
 
