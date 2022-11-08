@@ -12,13 +12,9 @@ col3, col4 = st.columns(2)
 image = Image.open('image.png')
 
  
-
 col1.header("Pink Data Hub Financial App")
 col1.write("A Form Web App With Downloadable CSV File")
 col2.image(image)
-
-
-
 
 try:
    with st.form("forms", clear_on_submit=True):
@@ -46,5 +42,3 @@ try:
                                file_name=file_name,
                                key='download_df')
             df.close()
-            
-            
