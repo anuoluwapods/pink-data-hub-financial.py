@@ -35,4 +35,3 @@ try:
             df = SessionState.get(df=data)
             df = df.append(data, ignore_index=True)
             df.to_csv("company_details.csv", index=False, encoding="utf-8")
-            
