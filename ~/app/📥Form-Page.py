@@ -33,7 +33,7 @@ try:
             st.success("Submitted Successfully")
             data = {"company_id": id, "date": date, "company_name":name, "amount":amount, "payment_mode":payment}
             df = df.append(data, ignore_index=True)
-            df.to_csv("company_details.csv", index=False, encoding="utf-8"
+            df.to_csv("company_details.csv", index=False, encoding="utf-8")
             df = SessionState.get(df=data)
             file_name = "financial_records.csv"
             file_path = f"./{file_name}"
@@ -46,5 +46,5 @@ try:
                                file_name=file_name,
                                key='download_df')
             df.close()
-            )
+            
             
